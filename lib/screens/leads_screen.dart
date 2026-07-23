@@ -1,21 +1,45 @@
-class LeadModel {
-
-  String name;
-  String company;
-  String phone;
-  String status;
+import 'package:flutter/material.dart';
 
 
-  LeadModel({
+class LeadsScreen extends StatelessWidget {
 
-    required this.name,
+  const LeadsScreen({super.key});
 
-    required this.company,
 
-    required this.phone,
+  @override
+  Widget build(BuildContext context){
 
-    required this.status,
+    return Scaffold(
 
-  });
+      appBar: AppBar(
+        title: const Text("Leads"),
+      ),
 
+
+      floatingActionButton:
+      FloatingActionButton(
+
+        child:
+        const Icon(Icons.add),
+
+        onPressed:(){},
+
+      ),
+
+
+      body:
+      const Center(
+
+        child:
+        Text(
+          "No leads added yet",
+          style:
+          TextStyle(
+            fontSize:18,
+          ),
+        ),
+
+      ),
+    );
+  }
 }
